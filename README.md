@@ -1,3 +1,21 @@
+# Install MegaCLI on CentOS 6.x, 7.x (.rpm)
+```bash
+# cd /usr/local/src
+# wget https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/8-07-14_MegaCLI.zip
+# unzip 8-07-14_MegaCLI.zip
+# rpm -Uvh Linux/MegaCli-8.07.14-1.noarch.rpm
+# /opt/MegaRAID/MegaCli/MegaCli64 -h
+```
+
+# Install MegaCLI on Debian, Ubuntu, Proxmox (.deb)
+```bash
+# cd /usr/local/src
+# wget https://docs.broadcom.com/docs-and-downloads/raid-controllers/raid-controllers-common-files/8-07-14_MegaCLI.zip
+# unzip 8-07-14_MegaCLI.zip
+# alien Linux/MegaCli-8.07.14-1.noarch.rpm
+# dpkg -imegacli_8.07.14-1_all.deb
+# /opt/MegaRAID/MegaCli/MegaCli64 -h
+```
 # lsi.sh
 
 This is a public repository for the lovely [wrapper script](https://calomel.org/megacli_lsi_commands.html) created by [Calomel.org](https://calomel.org/) for the LSI hardware RAID command line tool MegaCLI, [provided](https://calomel.org/calomel_at.html) Creative Commons Attribution-ShareAlike 4.0 International [license](http://creativecommons.org/licenses/by-sa/4.0/).
@@ -22,15 +40,10 @@ I'm hoping by putting this out there to encourage further development and extens
 
 # Environment
 
-I'm working under an Ubuntu/Debian environment, but I think the only
-real change that anybody on any \*nix would need make is in the
-`MegaCli` variable at the top of the file.
+I'm working under an CentOS environment and I'm have been using this script for a year.
 
-To get a proper scriptable package for Ubuntu and deployments, I
-followed the
-instructions [here](http://hwraid.le-vert.net/wiki/DebianPackages),
-from another very useful LSI
-MegaRAID [resource](http://hwraid.le-vert.net/wiki/LSIMegaRAIDSAS).
+# Improvement
+Send alert via Telegram
 
+# More information 
 An additional shout out to the useful RAID wiki on kernel.org for [their information](https://raid.wiki.kernel.org/index.php/Hardware_Raid_Setup_using_MegaCli) on MegaCli.
-
